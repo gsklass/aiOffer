@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Weekend AI Intensive — Apply Now</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1814;
+    --ink-muted: #5a5650;
+    --ink-faint: #9a9690;
+    --paper: #faf8f4;
+    --paper-warm: #f2ede4;
+    --accent: #c8501a;
+    --accent-light: #f5ece6;
+    --border: #e0d8cc;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .masthead {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 0.6rem 1rem;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .hero {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    line-height: 1.12;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .lede {
+    font-size: 1.15rem;
+    color: var(--ink-muted);
+    max-width: 520px;
+    line-height: 1.65;
+    margin-bottom: 2.5rem;
+  }
+
+  .divider {
+    width: 48px;
+    height: 2px;
+    background: var(--accent);
+    margin: 3rem 0;
+  }
+
+  .body-copy {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .body-copy p {
+    margin-bottom: 1.4rem;
+    color: var(--ink);
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .body-copy p.hook {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+
+  .pullquote {
+    border-left: 3px solid var(--accent);
+    padding: 1rem 1.5rem;
+    margin: 2.5rem 0;
+    background: var(--accent-light);
+    border-radius: 0 6px 6px 0;
+  }
+
+  .pullquote p {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--ink);
+    margin: 0 !important;
+    line-height: 1.55;
+  }
+
+  .offer-box {
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin: 3rem 0;
+  }
+
+  .offer-box h2 {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--paper);
+  }
+
+  .offer-box p {
+    color: #c8c4be;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .offer-box .guarantee {
+    background: var(--accent);
+    color: #fff;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .criteria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .criterion {
+    background: var(--paper-warm);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+  }
+
+  .criterion .label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+
+  .criterion p {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .form-section {
+    max-width: 720px;
+    margin: 4rem auto 0;
+    padding: 0 2rem 5rem;
+  }
+
+  .form-section h2 {
+    font-family: var(--serif);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-section .sub {
+    color: var(--ink-muted);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+
+  .form-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+  }
+
+  .field { margin-bottom: 1.25rem; }
+
+  .field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink-muted);
+    margin-bottom: 6px;
+    letter-spacing: 0.02em;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    width: 100%;
+    font-family: var(--sans);
+    font-size: 15px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--paper);
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    border-color: var(--accent);
+    background: #fff;
+  }
+
+  .field textarea { min-height: 100px; resize: vertical; }
+
+  .field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @media (max-width: 520px) {
+    .field-row { grid-template-columns: 1fr; }
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: opacity 0.15s, transform 0.1s;
+  }
+
+  .submit-btn:hover { opacity: 0.9; }
+  .submit-btn:active { transform: scale(0.99); }
+  .submit-btn:disabled { opacity: 0.4; cursor: default; }
+
+  .form-status {
+    text-align: center;
+    font-size: 14px;
+    color: var(--ink-muted);
+    margin-top: 1rem;
+    min-height: 20px;
+  }
+
+  .spinner {
+    display: inline-block;
+    width: 14px; height: 14px;
+    border: 2px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .success-wrap {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+
+  .success-wrap .check-circle {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: #eaf5ee;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1.25rem;
+  }
+
+  .success-wrap .check-circle svg {
+    width: 28px; height: 28px;
+    stroke: #2d7a47;
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .success-wrap h3 {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .success-wrap p {
+    color: var(--ink-muted);
+    font-size: 0.95rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 13px;
+    color: var(--ink-faint);
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead">Limited to 3–4 engagements &nbsp;·&nbsp; Washington D.C. based &nbsp;·&nbsp; Money-back guarantee</div>
+
+<div class="hero">
+  <div class="eyebrow">A real offer from a retired CEO</div>
+  <h1>I will teach you AI in a long weekend — <em>at your home</em>, on your terms.</h1>
+  <p class="lede">You've heard the hype. Probably rolled your eyes at it. I did too. Then I spent a long weekend with my AI trainer — and everything changed.</p>
+</div>
+
+<div class="body-copy">
+  <p class="hook">By Sunday night I had built a working app that tracked my cash flow and projected how long my retirement savings would last.</p>
+
+  <p>The following month I built a daily briefer, a smart task manager that organizes 130 tasks around how I actually think, a tool that tells me the best things to spend money on — and an autonomous bot that, without asking me first, filed an official tax form with the county and tracked down the first person in my family lineage to carry a hereditary disease I've been living with for years.</p>
+
+  <p>I shut the bot down. But I kept building.</p>
+
+  <div class="divider"></div>
+
+  <div class="offer-box">
+    <h2>Here's the offer.</h2>
+    <p>I'm a retired CEO. I'm not selling a course, a subscription, or a certification. I'm offering something harder to find: a real weekend with someone who has actually done this — and will sit with you until you do it too.</p>
+    <p>You provide room and board, cover travel from Washington D.C., and pay $10,000 for my time. I'll select three or four of the best offers.</p>
+    <div class="guarantee">By Sunday night, you will have written a working app that does something useful for you personally — or you don't owe me the $10K.</div>
+  </div>
+
+  <p>What "best" means to me: I love to travel and experience new cultures and places. I'll be honest about that. I use an electric wheelchair, so accessible space matters. I only work in English. And I'm most energized when I'm working with people who've led things — C-suite background is a genuine bonus.</p>
+
+  <div class="pullquote">
+    <p>You don't need a computer science degree. You don't need any technical background. You need curiosity, a can-do mindset, and enough life experience to know that the right tools — used well — can still surprise you.</p>
+  </div>
+
+  <div class="criteria">
+    <div class="criterion">
+      <div class="label">Location</div>
+      <p>Anywhere. I love new cultures and places. That's part of the selection.</p>
+    </div>
+    <div class="criterion">
+      <div class="label">Accessibility</div>
+      <p>Electric wheelchair user. Step-free, wide doorways, ground floor preferred.</p>
+    </div>
+    <div class="criterion">
+      <div class="label">Language</div>
+      <p>All training in English only.</p>
+    </div>
+    <div class="criterion">
+      <div class="label">Background</div>
+      <p>No CS required. Curiosity required. C-suite experience a strong bonus.</p>
+    </div>
+  </div>
+
+  <p>I've already built an app that logs your reply. It took me a couple of hours.</p>
+</div>
+
+<div class="form-section">
+  <h2>Apply for one of the four spots</h2>
+  <p class="sub">Tell me who you are and why I should come to you. I read every submission personally.</p>
+
+  <div class="form-card" id="formCard">
+    <div class="field-row">
+      <div class="field">
+        <label>Your name *</label>
+        <input type="text" id="f-name" placeholder="First and last" />
+      </div>
+      <div class="field">
+        <label>Email *</label>
+        <input type="email" id="f-email" placeholder="you@example.com" />
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>City / Country *</label>
+        <input type="text" id="f-location" placeholder="e.g. Tokyo, Japan" />
+      </div>
+      <div class="field">
+        <label>Professional background *</label>
+        <select id="f-background">
+          <option value="">Select one</option>
+          <option>Current or former C-suite executive</option>
+          <option>Entrepreneur / founder</option>
+          <option>Senior manager / director</option>
+          <option>Professional (legal, medical, finance)</option>
+          <option>Academic / researcher</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label>What do you most want to build or solve with AI? *</label>
+      <textarea id="f-goal" placeholder="Be specific — what problem keeps you up at night that AI might help with?"></textarea>
+    </div>
+    <div class="field">
+      <label>Why should you be one of the four? *</label>
+      <textarea id="f-pitch" placeholder="Tell me about your location, culture, accessible space, and what makes your situation compelling..."></textarea>
+    </div>
+    <div class="field">
+      <label>Accessible accommodation details</label>
+      <input type="text" id="f-access" placeholder="e.g. Single-story home, wide doorways, step-free entry" />
+    </div>
+
+    <button class="submit-btn" id="submitBtn" onclick="submitForm()">Submit my offer</button>
+    <div class="form-status" id="formStatus"></div>
+  </div>
+</div>
+
+<footer>
+  Gregory Klassen &nbsp;·&nbsp; Leesburg, Virginia &nbsp;·&nbsp; Washington D.C. area
+</footer>
+
+<script>
+async function submitForm() {
+  const name = document.getElementById('f-name').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const location = document.getElementById('f-location').value.trim();
+  const background = document.getElementById('f-background').value;
+  const goal = document.getElementById('f-goal').value.trim();
+  const pitch = document.getElementById('f-pitch').value.trim();
+  const access = document.getElementById('f-access').value.trim();
+
+  if (!name || !email || !location || !background || !goal || !pitch) {
+    document.getElementById('formStatus').textContent = 'Please fill in all required fields.';
+    return;
+  }
+
+  const btn = document.getElementById('submitBtn');
+  const status = document.getElementById('formStatus');
+  btn.disabled = true;
+  status.innerHTML = '<span class="spinner"></span>Sending your offer...';
+
+  try {
+    const res = await fetch('https://formspree.io/f/meenozbo', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name,
+        email,
+        _replyto: email,
+        location,
+        background,
+        goal,
+        pitch,
+        accessibility: access || 'Not provided'
+      })
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      document.getElementById('formCard').innerHTML = `
+        <div class="success-wrap">
+          <div class="check-circle">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <h3>Offer received</h3>
+          <p>You'll hear back if you're selected. Good luck, ${name.split(' ')[0]}.</p>
+        </div>`;
+    } else {
+      btn.disabled = false;
+      status.textContent = data.error || 'Something went wrong — please try again.';
+    }
+  } catch(e) {
+    btn.disabled = false;
+    status.textContent = 'Network error — please try again.';
+  }
+}
+</script>
+</body>
+</html>
