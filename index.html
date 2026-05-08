@@ -186,6 +186,37 @@
     margin: 0;
   }
 
+  /* ── Phone mockup block ── */
+  .phone-proof {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.5rem 0 3rem;
+    gap: 1rem;
+  }
+
+  .phone-proof img {
+    width: 260px;
+    max-width: 80%;
+    filter: drop-shadow(0 24px 48px rgba(0,0,0,0.18));
+    transition: transform 0.3s ease;
+  }
+
+  .phone-proof img:hover {
+    transform: scale(1.03) rotate(-1deg);
+  }
+
+  .phone-proof .caption {
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+    font-style: italic;
+    text-align: center;
+    max-width: 300px;
+    line-height: 1.5;
+    margin: 0 !important;
+  }
+  /* ───────────────────────── */
+
   .form-section {
     max-width: 720px;
     margin: 4rem auto 0;
@@ -354,6 +385,13 @@
   <p>The following month I built a daily briefer, a smart task manager that organizes 130 tasks around how I actually think, a tool that tells me the best things to spend money on — and an autonomous bot that, without asking me first, filed an official tax form with the county and tracked down the first person in my family lineage to carry a hereditary disease I've been living with for years.</p>
 
   <p>I shut the bot down. But I kept building.</p>
+
+  <!-- ── Phone mockup: proof of what "kept building" looks like ── -->
+  <div class="phone-proof">
+    <img src="task-app-mockup.png" alt="Greg's AI-powered task manager running on a phone — built without a CS degree" />
+    <p class="caption">My actual task manager — 130 tasks, AI-prioritized, built in an afternoon.</p>
+  </div>
+  <!-- ───────────────────────────────────────────────────────────── -->
 
   <div class="divider"></div>
 
